@@ -19,11 +19,16 @@ if($_POST["username"]=="admin" AND $_POST["password"]=="panel") {
 	echo "<h1>Welcome to admin panel!</h1>";
 	echo "<a href='logout.php'>Logout</a>";
 } }
-elseif(isset($_COOKIE['cookie'])=='3e3e6b0e5c1c68644fc5ce3cf060211d')
+elseif(isset($_COOKIE['cookie']))
+	{if($_COOKIE['cookie']=='3e3e6b0e5c1c68644fc5ce3cf060211d')
 {
 	echo "<h1>Welcome to admin panel!</h1>";
 	echo "<a href='logout.php'>Logout</a>";
 }
+else
+{
+	header('Location: login.php');
+}}
 else
 {
 	header('Location: login.php');
