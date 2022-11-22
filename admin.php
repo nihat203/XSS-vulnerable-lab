@@ -12,12 +12,13 @@
 
 <?php
 
+if(isset($_POST["username"]) AND isset($_POST["password"])){
 if($_POST["username"]=="admin" AND $_POST["password"]=="panel") {
 	setcookie('cookie','3e3e6b0e5c1c68644fc5ce3cf060211d');
 	$_COOKIE['cookie']='3e3e6b0e5c1c68644fc5ce3cf060211d';
 	echo "<h1>Welcome to admin panel!</h1>";
 	echo "<a href='logout.php'>Logout</a>";
-} 
+} }
 elseif(isset($_COOKIE['cookie'])=='3e3e6b0e5c1c68644fc5ce3cf060211d')
 {
 	echo "<h1>Welcome to admin panel!</h1>";
